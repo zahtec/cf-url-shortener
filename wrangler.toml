@@ -22,6 +22,6 @@ custom_domain = true
 zone_id       = "6d83bd758e025e6d0ee51302a450b0d1"
 
 [[routes]]
-pattern       = "🔗.toryn.bio"
+pattern       = "xn--qv8h.toryn.bio"
 custom_domain = true
 zone_id       = "6d83bd758e025e6d0ee51302a450b0d1"

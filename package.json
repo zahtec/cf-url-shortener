@@ -1,6 +1,12 @@
 {
 	"name": "links",
 	"version": "0.0.0",
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.4.27",
+		"@cloudflare/workers-types": "^4.20240821.1",
+		"typescript": "^5.5.4",
+		"wrangler": "^3.73.0"
+	},
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
@@ -9,11 +15,7 @@
 		"test": "vitest",
 		"cf-typegen": "wrangler types"
 	},
-	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.4.27",
-		"@cloudflare/workers-types": "^4.20240821.1",
-		"typescript": "^5.5.4",
-		"vitest": "2.0.5",
-		"wrangler": "^3.73.0"
+	"dependencies": {
+		"@devmehq/open-graph-extractor": "^1.0.4"
 	}
 }
