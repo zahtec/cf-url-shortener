@@ -12,7 +12,14 @@
  */
 
 export default {
-	async fetch(request, env, ctx): Promise<Response> {
-		return new Response('Hello World!');
+	async fetch(request, env, _): Promise<Response> {
+		const url = await env.KV.get(new URL(request.url).pathname.split("/")[1] || "undefined");
+
+		return new Response(undefined, {
+			headers: {
+				Location: url ?? "",
+			},
+			status: url ? 301 : 404,
+		});
 	},
 } satisfies ExportedHandler<Env>;
